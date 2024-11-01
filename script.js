@@ -1,6 +1,6 @@
 const texts = [
     "TEACHER",
-    "DEVELOPPER",
+    "DEVELOPER",
     "LINUX ENTHUSIAST"
 ]
 
