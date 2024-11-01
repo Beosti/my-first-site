@@ -136,6 +136,7 @@ span{
 
 .home-img img{
     position: relative;
+    position: relative;
     width: 32vw;
     border-radius: 50%;
     box-shadow: 0 0 25px solid #F5F5DC;
@@ -182,6 +183,8 @@ span{
     border: 2px solid #F5F5DC;
     transition: 0.3s ease;
     cursor: pointer;
+    bottom: 100%;
+    margin-top: 2rem;
 }
 
 .btn:hover{
@@ -216,6 +219,58 @@ span{
     border-left: 3px solid #808080;
     right: -8;
     animation: cursor 0.6s infinite;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    font-size: 0.55em;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -80%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-top: 1rem;
+}
+
+.tooltip.github .tooltip-text {
+    bottom: -68%; /* Adjust this value to move it up or down */
+}
+
+/* Adjust positioning for the Discord tooltip */
+.tooltip.discord .tooltip-text {
+    bottom: -110%; /* Adjust this value as needed */
+}
+
+/*
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--primary-color) transparent transparent transparent;
+}
+*/
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
 @keyframes cursor{
