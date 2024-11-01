@@ -273,6 +273,20 @@ span{
     opacity: 1;
 }
 
+.typewriter{
+    color:antiquewhite;
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.typewriter-text{
+    font-size: 3.5rem;
+    color: black;
+}
+.typewriter label{
+    font-size: 3.5rem;
+}
+
 @keyframes cursor{
     to{
         border-left: 3px solid #F5F5DC;
