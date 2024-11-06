@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #808080;
+    color: white;
+}
 
 header{
     margin-top: 20px;
@@ -12,6 +35,7 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background-color: #808080; /* Gray color */
 }
 
 .logo{
@@ -74,41 +98,101 @@ nav a.active{
     }
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-.container{
+.container {
+    margin-top: 80px; /* Adjust this value to match the height of your header */
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+    padding-top: 80px; /* Adjust as needed based on the header height */
 }
 
 section {
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center; /* Center the content horizontally */
     scroll-snap-align: start;
 }
 
-h1{
-    color: rgb(226, 266, 226);
-    text-shadow: 1px, 1px, 4px, #000;
+section img {
+    width: 50%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.one{
-    background-color: rgb(36, 164, 138);
+section .text {
+    font-size: 2rem; /* Adjust as needed */
+    width: 100%; /* Full width to align with the section */
+    text-align: center; /* Center text horizontally if needed */
+    margin-bottom: 20px; /* Add space between text and image */}
+
+.container
+{
+    position: relative;
+    height: 100vh;
 }
-.two{
+
+h1{
+    position: relative;
+    top: 10%; /* Moves the h1 10% of the container height down */
+    left: 48%;
+    transform: translateX(-50%); /* Centers the h1 horizontally */
+    margin: 0;
+    padding: 1rem;
+    color: rgb(226, 266, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+h2{
+    position: relative;
+    top: 10%; /* Moves the h1 10% of the container height down */
+    left: 48%;
+    transform: translateX(-50%); /* Centers the h1 horizontally */
+    margin: 0;
+    padding: 1rem;
+    color: rgb(226, 266, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+h3{
+    position: relative;
+    top: 10%; /* Moves the h1 10% of the container height down */
+    left: 48%;
+    transform: translateX(-50%); /* Centers the h1 horizontally */
+    margin: 0;
+    padding: 1rem;
+    color: rgb(226, 266, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+h4{
+    position: relative;
+    top: 10%; /* Moves the h1 10% of the container height down */
+    left: 48%;
+    transform: translateX(-50%); /* Centers the h1 horizontally */
+    margin: 0;
+    padding: 1rem;
+    color: rgb(226, 266, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+.container .one{
+    background-color: rgb(34, 139, 34);
+    display: flex;
+    flex-direction: row;
+}
+.container .two{
     background-color: rgb(211, 79, 79);
+    display: flex;
+    flex-direction: row-reverse;
 }
 .three{
+    display: flex;
     background-color: rgb(67, 91, 175);
+    flex-direction: row;
 }
 .four{
+    display: flex;
     background-color: rgb(191, 64, 191);
+    flex-direction: row-reverse;
 }
