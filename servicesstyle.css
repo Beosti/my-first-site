@@ -94,9 +94,21 @@ nav a.active{
     transition: 0.5s ease;
 }
 
-main {
+.scroll-container {
     max-width: 800px;
     margin: 20px auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    position: relative;
+}
+
+.reading-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center; /* Center the content horizontally */
+    scroll-snap-align: start;
 }
 
 .tiles-container {
@@ -133,6 +145,8 @@ main {
 .tile:hover {
     transform: scale(1.05);
 }
+
+
 
 footer {
     background-color: #333;

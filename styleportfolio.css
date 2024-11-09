@@ -104,6 +104,7 @@ nav a.active{
     overflow-y: scroll;
     height: 100vh;
     padding-top: 80px; /* Adjust as needed based on the header height */
+    position: relative;
 }
 
 section {
@@ -126,11 +127,6 @@ section .text {
     text-align: center; /* Center text horizontally if needed */
     margin-bottom: 20px; /* Add space between text and image */}
 
-.container
-{
-    position: relative;
-    height: 100vh;
-}
 
 h1{
     position: relative;
