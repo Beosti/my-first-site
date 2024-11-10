@@ -208,9 +208,8 @@ section img {
     padding: 1rem;
     color: rgb(226, 266, 226);
     text-shadow: 1px 1px 4px #000;
-    font-size: 1.5rem; /* Ensure readable font size */
     margin: 0; /* Remove default margin */
     color: #f4c2c2;
     height: 200px;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
 }
