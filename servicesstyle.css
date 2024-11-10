@@ -23,7 +23,7 @@ body{
 }
 
 header{
-    margin-top: 20px;
+    margin-top: 0px;
     position: fixed;
     top: 0;
     left: 0;
@@ -36,6 +36,18 @@ header{
     align-items: center;
     z-index: 100;
     background-color: #808080; /* Gray color */
+}
+
+.logo{
+    font-size: 3rem;
+    color: #F5F5DC;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
 }
 
 nav a{
@@ -86,23 +98,39 @@ nav a.active{
     }
 }
 
-.logo{
-    font-size: 3rem;
-    color: #F5F5DC;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
-
-.scroll-container {
-    max-width: 800px;
-    margin: 20px auto;
+.container {
+    margin-top: 60px; /* Adjust this value to match the height of your header */
     scroll-snap-type: y mandatory;
+    overflow-y: scroll;
     height: 100vh;
     position: relative;
 }
 
-.reading-page {
+.container .one{
+    background-color: rgb(34, 139, 34);
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.container .two{
+    background-color: rgb(211, 79, 79);
+    display: flex;
+    flex-direction: row-reverse;
+}
+.container .three{
+    display: flex;
+    background-color: rgb(67, 91, 175);
+    flex-direction: row;
+}
+.container .four{
+    display: flex;
+    background-color: rgb(191, 64, 191);
+    flex-direction: row-reverse;
+}
+
+
+section {
+    scroll-margin-top: 60px;
     height: 100vh;
     display: flex;
     flex-direction: column; /* Arrange content vertically */
@@ -111,29 +139,93 @@ nav a.active{
     scroll-snap-align: start;
 }
 
-.tiles-container {
-    transform: scale(1.4); /* 1.4 will increase everything by 50% */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+section img {
+    width: 50%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+section .text {
+    font-size: 2rem; /* Adjust as needed */
+    width: 100%; /* Full width to align with the section */
+    text-align: center; /* Center text horizontally if needed */
+    margin-bottom: 20px; /* Add space between text and image */}
+
+
+h1{
     position: relative;
-    top: 180px;
-    place-items: center;
+    top: 10%; /* Moves the h1 10% of the container height down */
+    left: 48%;
+    transform: translateX(-50%); /* Centers the h1 horizontally */
+    margin: 0;
+    padding: 1rem;
+    color: rgb(226, 266, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+h2{
+    position: relative;
+    top: 10%; /* Moves the h1 10% of the container height down */
+    left: 48%;
+    transform: translateX(-50%); /* Centers the h1 horizontally */
+    margin: 0;
+    padding: 1rem;
+    color: rgb(226, 266, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+h3{
+    position: relative;
+    top: 10%; /* Moves the h1 10% of the container height down */
+    left: 48%;
+    transform: translateX(-50%); /* Centers the h1 horizontally */
+    margin: 0;
+    padding: 1rem;
+    color: rgb(226, 266, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+h4{
+    position: relative;
+    top: 10%; /* Moves the h1 10% of the container height down */
+    left: 48%;
+    transform: translateX(-50%); /* Centers the h1 horizontally */
+    margin: 0;
+    padding: 1rem;
+    color: rgb(226, 266, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+.tiles-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    grid-template-rows: 400px 100px; /* First row taller, second row shorter */
+    gap: -50px;
+    row-gap: 120px;
+    margin-top: 100%;
+    justify-items: center;
+    align-items: center;
 }
 
 .tile {
     display: flex;
-    line-height: 200px; /* <-- this is what you must define */
-    flex: 1 0 300px;
-    background-color: #f0ead6;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 800px; /* Full width within grid cell */
+    height: 300px; /* Set a fixed height */
+    line-height: 150px; /* <-- this is what you must define */
+    background-color: #f0ead6; /* Light background color for visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
+    text-align: center; /* Center text inside tiles */
     place-items: center;
-    align-items: center; /* Centers horizontally */
-    text-align: center;
-    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Center content vertically */
+    justify-content: flex-start; /* Center content horizontally */
+    color: #333; /* Dark text color for contrast */
+}
+
+.tile h1, .tile h2, .tile h3, .tile h4 {
+    font-size: 1.5rem; /* Ensure readable font size */
+    margin: 0; /* Remove default margin */
 }
 
 .tiles-container h1, h2, h3, h4 {
@@ -144,13 +236,4 @@ nav a.active{
 
 .tile:hover {
     transform: scale(1.05);
-}
-
-
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
 }
