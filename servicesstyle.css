@@ -99,35 +99,12 @@ nav a.active{
 }
 
 .container {
-    margin-top: 60px; /* Adjust this value to match the height of your header */
+    margin-top: 0px; /* Adjust this value to match the height of your header */
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
     position: relative;
 }
-
-.container .one{
-    background-color: rgb(34, 139, 34);
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-}
-.container .two{
-    background-color: rgb(211, 79, 79);
-    display: flex;
-    flex-direction: row-reverse;
-}
-.container .three{
-    display: flex;
-    background-color: rgb(67, 91, 175);
-    flex-direction: row;
-}
-.container .four{
-    display: flex;
-    background-color: rgb(191, 64, 191);
-    flex-direction: row-reverse;
-}
-
 
 section {
     scroll-margin-top: 60px;
@@ -139,61 +116,6 @@ section {
     scroll-snap-align: start;
 }
 
-section img {
-    width: 50%; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-
-section .text {
-    font-size: 2rem; /* Adjust as needed */
-    width: 100%; /* Full width to align with the section */
-    text-align: center; /* Center text horizontally if needed */
-    margin-bottom: 20px; /* Add space between text and image */}
-
-
-h1{
-    position: relative;
-    top: 10%; /* Moves the h1 10% of the container height down */
-    left: 48%;
-    transform: translateX(-50%); /* Centers the h1 horizontally */
-    margin: 0;
-    padding: 1rem;
-    color: rgb(226, 266, 226);
-    text-shadow: 1px 1px 4px #000;
-}
-
-h2{
-    position: relative;
-    top: 10%; /* Moves the h1 10% of the container height down */
-    left: 48%;
-    transform: translateX(-50%); /* Centers the h1 horizontally */
-    margin: 0;
-    padding: 1rem;
-    color: rgb(226, 266, 226);
-    text-shadow: 1px 1px 4px #000;
-}
-
-h3{
-    position: relative;
-    top: 10%; /* Moves the h1 10% of the container height down */
-    left: 48%;
-    transform: translateX(-50%); /* Centers the h1 horizontally */
-    margin: 0;
-    padding: 1rem;
-    color: rgb(226, 266, 226);
-    text-shadow: 1px 1px 4px #000;
-}
-
-h4{
-    position: relative;
-    top: 10%; /* Moves the h1 10% of the container height down */
-    left: 48%;
-    transform: translateX(-50%); /* Centers the h1 horizontally */
-    margin: 0;
-    padding: 1rem;
-    color: rgb(226, 266, 226);
-    text-shadow: 1px 1px 4px #000;
-}
 
 .tiles-container {
     display: grid;
@@ -223,17 +145,72 @@ h4{
     color: #333; /* Dark text color for contrast */
 }
 
-.tile h1, .tile h2, .tile h3, .tile h4 {
-    font-size: 1.5rem; /* Ensure readable font size */
-    margin: 0; /* Remove default margin */
+.tile:hover {
+    transform: scale(1.05);
 }
 
-.tiles-container h1, h2, h3, h4 {
+.text h1, .text h2, .text h3, .text h4 {
+    font-size: 2.5rem; /* Ensure consistent size */
+    position: relative;
+    top: 10%; /* Adjusts heading position */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0; /* Removes default margin to avoid extra space */
+    padding: 1rem;
+    color: rgb(226, 226, 226);
+    text-shadow: 1px 1px 4px #000;
+    line-height: 1.2; /* Adjusts line height for closer spacing */
+}
+
+.text p {
+    margin-top: 1rem; /* Add spacing above paragraph text, if needed */
+}
+
+
+.container .one{
+    background-color: rgb(191, 227, 180);
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.container .two{
+    background-color: rgb(255,155,155);
+    display: flex;
+    flex-direction: row-reverse;
+}
+.container .three{
+    display: flex;
+    background-color: rgb(209,223,246);
+    flex-direction: row;
+}
+.container .four{
+    display: flex;
+    background-color: rgb(223, 200, 230);
+    flex-direction: row-reverse;
+}
+section .text {
+    font-size: 2rem; /* Adjust as needed */
+    width: 100%; /* Full width to align with the section */
+    text-align: center; /* Center text horizontally if needed */
+    margin-bottom: 20px; /* Add space between text and image */}
+
+section img {
+    width: 50%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.tiles-container h1, .tiles-container h2, .tiles-container h3, .tiles-container h4{
+    position: relative;
+    top: 10%; /* Moves the h1 10% of the container height down */
+    left: 48%;
+    transform: translateX(-50%); /* Centers the h1 horizontally */
+    margin: 0;
+    padding: 1rem;
+    color: rgb(226, 266, 226);
+    text-shadow: 1px 1px 4px #000;
+    font-size: 1.5rem; /* Ensure readable font size */
+    margin: 0; /* Remove default margin */
     color: #f4c2c2;
     height: 200px;
     font-size: 1.5rem;
-}
-
-.tile:hover {
-    transform: scale(1.05);
 }
